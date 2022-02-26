@@ -1,0 +1,205 @@
+.App {
+    padding: 50px;
+}
+
+.toolbar {
+    background-color: #d0ceee;
+    height: 100px;
+    width: auto;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.toolbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.toolbar a:hover {
+    color: #c5c3ec;
+}
+
+.profileInfo {
+    background-color: #c5c3ec;
+    font-size: 20px;
+    border: 1px solid white;
+    padding: 10px;
+    width: 350px;
+
+}
+
+/*Register and Login*/
+
+.registerField {
+    width: auto;
+    height: 400px;
+    background-color: #d0ceee;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.registerField input {
+    height: 30px;
+    width: 80%;
+}
+
+.registerField button {
+    height: 50px;
+    width: 150px;
+    border: none;
+    background-color: #ebf2fc;
+    font-size: 15px;
+}
+
+/*CreatePage*/
+
+.dropdown {
+    height: 30px;
+    width: 100%;
+}
+
+.dropdown select {
+    height: 30px;
+    width: 100%;
+}
+
+/*Auction List*/
+
+.auctionField {
+    background-color: #d0ceee;
+    height: 300px;
+    width: 600px;
+    margin: 20px;
+
+}
+
+.auctionField img {
+    height: 100%;
+    margin-right: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.bidButton {
+    height: 40px;
+    width: 60px;
+    border: none;
+    background-color: white;
+    color: #c5c3ec;
+}
+
+.bidButton:hover {
+    cursor: pointer;
+    background-color: #c5c3ec;
+    color: white;
+}
+
+/*Product info page*/
+
+.productInfo {
+    height: 500px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.productInfo img {
+    margin-right: 30px;
+    height: 550px;
+}
+
+/*Bid page*/
+
+.bidField div input {
+    height: 30px;
+}
+
+.bidField div button {
+    height: 30px;
+    width: 150px;
+    margin: 20px;
+}
+
+.bidsCard {
+    width: 100%;
+    height: 50px;
+    background-color: #d0ceee;
+    margin: 10px;
+}
+
+/*Auction and bid history*/
+
+.auctionHistory {
+    width: auto;
+    height: 150px;
+    margin-top: 20px;
+    background-color: #d0ceee;
+    padding: 20px;
+}
+
+.historyImg {
+    height: 150px;
+    width: auto;
+}
+
+.bidHistory {
+    width: auto;
+    height: 50px;
+    margin-top: 20px;
+    background-color: #d0ceee;
+    padding: 20px;
+}
+
+.bidHistory img {
+    height: 100%;
+}
+
+
+
+/*Main classes*/
+.d-flex {
+    display: flex;
+}
+
+.f-column {
+    flex-direction: column;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.al-center {
+    align-items: center;
+}
+
+.j-ard {
+    justify-content: space-around;
+}
+
+.j-btw {
+    justify-content: space-between;
+}
+
+.flex1 {
+    flex: 1
+}
+
+.flex3 {
+    flex: 5
+}
+
+.f-wrap {
+    flex-wrap: wrap;
+}
+
+.font-10 {
+    font-size: 10px;
+}
+.column-reverse {
+    flex-direction: column-reverse;
+}
+
+.mar-10 {
+    margin: 10px
+}
