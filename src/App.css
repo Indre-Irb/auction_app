@@ -74,13 +74,6 @@
 
 }
 
-.auctionField img {
-    height: 100%;
-    margin-right: 10px;
-    overflow: hidden;
-    box-sizing: border-box;
-}
-
 .bidButton {
     height: 40px;
     width: 60px;
@@ -95,7 +88,12 @@
     color: white;
 }
 
-.deleteBtn{
+.auctionImg {
+    width: 100%;
+    margin-right: 10px;
+}
+
+.deleteBtn {
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -169,7 +167,6 @@
 }
 
 
-
 /*Main classes*/
 .d-flex {
     display: flex;
@@ -199,6 +196,10 @@
     flex: 1
 }
 
+.flex2 {
+    flex: 2
+}
+
 .flex3 {
     flex: 5
 }
@@ -210,6 +211,7 @@
 .font-10 {
     font-size: 10px;
 }
+
 .column-reverse {
     flex-direction: column-reverse;
 }
@@ -219,7 +221,7 @@
 }
 
 .m-tl-30 {
-     margin-top: 20px;
+    margin-top: 20px;
     margin-left: 100px;
 }
 

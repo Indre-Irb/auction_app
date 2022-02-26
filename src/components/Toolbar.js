@@ -5,10 +5,13 @@ import http from "../plugins/http";
 
 const Toolbar = () => {
 
-    const {getUser} = useContext(MyContext)
+    const {getUser, setUser} = useContext(MyContext)
 
     async function loggout(){
         http.get(`loggout`).then(res => {
+            if(res.success){
+                setUser("")
+            }
         })
     }
 
@@ -23,7 +26,7 @@ const Toolbar = () => {
                     <Link to="/login">Login</Link>
                     <Link to="/create">Create Auction</Link>
                     <Link to="/bidhistory">Bid History</Link>
-                    <Link to="/loggout" onClick={loggout}>Logout</Link>
+                    <Link to="/login" onClick={loggout}>Logout</Link>
                 </div>
             </div>
             <div className="d-flex j-center">

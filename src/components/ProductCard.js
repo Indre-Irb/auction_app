@@ -48,11 +48,11 @@ const ProductCard = ({item, productId}) => {
 
     return (
         <div className="auctionField d-flex">
-            <div className="flex1">
-                <img src={item.photo} alt=""/>
+            <div className="flex1 d-flex al-center mar-10">
+                <img className="auctionImg" src={item.photo} alt=""/>
             </div>
             <div className="flex1 d-flex f-column j-ard">
-                <h2>{item.title}</h2>
+                <h3>{item.title}</h3>
                 <h6>{item.owner}</h6>
                 <h5>Current price: {item.price} Eur</h5>
                 <h5>Auction will end: {new Date(item.time).toLocaleTimeString('lt-LT')}</h5>
