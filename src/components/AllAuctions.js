@@ -18,13 +18,22 @@ const AllAuctions = () => {
         })
     }, [])
 
+    async function deleteAuction(id){
+        http.post({id}, `delete`).then(res => {
+            console.log(res)
+            setItemList(res.list)
+
+        })
+
+    }
+
     console.log(getItemList)
 
     return (
         <div className="d-flex f-wrap">
             {getItemList &&
                 getItemList.map((item, index) =>
-                    <ProductCard item={item} key={index}/>
+                    <ProductCard item={item} key={index} productId={deleteAuction} />
                 )}
         </div>
     );

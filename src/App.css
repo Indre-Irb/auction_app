@@ -95,6 +95,20 @@
     color: white;
 }
 
+.deleteBtn{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+    color: #c5c3ec;
+}
+
+.deleteBtn:hover {
+    cursor: pointer;
+    background-color: #c5c3ec;
+    color: white;
+}
+
 /*Product info page*/
 
 .productInfo {
@@ -202,4 +216,9 @@
 
 .mar-10 {
     margin: 10px
+}
+
+.m-tl-30 {
+     margin-top: 20px;
+    margin-left: 100px;
 }

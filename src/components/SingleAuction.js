@@ -9,6 +9,7 @@ const SingleAuction = () => {
     const [getItem, setItem] = useState([])
     const [getTime, setTime] = useState([])
     const [getBid, setBid] = useState([])
+    const [getMessage, setMessage] = useState()
     let [currentTime, setCurrentTime] = useState()
 
     const {id} = useParams()
@@ -55,8 +56,7 @@ const SingleAuction = () => {
             bid: Number(bid.current.value)
         }
         http.post(bidSum, "makeBid").then(res => {
-            console.log(res)
-            console.log(res.message)
+            setMessage(res.message)
             if (res.success) {
                 setBid([...getBid, res.bids])
                 setUser(res.updatedUser)
@@ -87,6 +87,7 @@ const SingleAuction = () => {
                                     <div>{getTime}</div>
                                 </div>
                             </div>
+                            {getMessage && <div>{getMessage}</div>}
                             <div className="bidField d-flex j-center al-center">
                                 <div>
                                     <input type="text" ref={bid} placeholder="Bid sum"/>

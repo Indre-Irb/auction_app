@@ -29,8 +29,8 @@ const Register = () => {
     return (
         <div className="registerField d-flex f-column j-ard al-center">
             <input type="text" ref={ref.username} placeholder="Your username"/>
-            <input type="text" ref={ref.pass1} placeholder="Your password"/>
-            <input type="text"  ref={ref.pass2} placeholder="Repeat your password"/>
+            <input type="password" ref={ref.pass1} placeholder="Your password"/>
+            <input type="password"  ref={ref.pass2} placeholder="Repeat your password"/>
             <button onClick={register}>Register</button>
         </div>
     );

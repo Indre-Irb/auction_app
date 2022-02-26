@@ -1,10 +1,12 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import http from "../plugins/http";
 import {useNavigate} from "react-router-dom";
+import MyContext from "../context/MyContext";
 
-const ProductCard = ({item}) => {
+const ProductCard = ({item, productId}) => {
 
     const [getTime, setTime] = useState()
+    const {getUser} = useContext(MyContext)
     const nav = useNavigate()
 
     const myInterval = setInterval(setCountDown, 1000)
@@ -29,14 +31,19 @@ const ProductCard = ({item}) => {
         setTime(timeHours + ':' + timeMinute + ':' + timeSecond)
     }
 
-    async function openItem(id){
+    async function openItem(id) {
         http.get(`openItem/${id}`).then(res => {
             console.log(res)
-            if(res.success){
+            if (res.success) {
                 nav(`/singleauction/${id}`)
             }
         })
     }
+
+    async function deleteItem(id){
+        productId(id)
+    }
+
 
 
     return (
@@ -51,6 +58,10 @@ const ProductCard = ({item}) => {
                 <h5>Auction will end: {new Date(item.time).toLocaleTimeString('lt-LT')}</h5>
             </div>
             <div className="flex1 d-flex j-center al-center f-column">
+                {getUser.username === item.owner &&
+                    <div className="deleteBtn d-flex j-center al-center m-tl-30">
+                        <div onClick={() => deleteItem(item._id)}>x</div>
+                    </div>}
                 <div className="flex3 d-flex f-column j-center">
                     <h5>Time left to bid:</h5>
                     <div>{getTime}</div>

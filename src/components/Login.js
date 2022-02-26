@@ -16,6 +16,7 @@ const Login = () => {
         }
 
        http.post(logged, "login").then(res => {
+           console.log(res)
            if(res.success) {
                nav('/allauctions')
            }
@@ -26,7 +27,7 @@ const Login = () => {
     return (
         <div className="registerField d-flex f-column j-ard al-center">
             <input type="text" ref={username} placeholder="Your username"/>
-            <input type="text" ref={pass} placeholder="Your password"/>
+            <input type="password" ref={pass} placeholder="Your password"/>
             <button onClick={login}>Login</button>
         </div>
     );
