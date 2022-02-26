@@ -30,7 +30,7 @@ const AllAuctions = () => {
     console.log(getItemList)
 
     return (
-        <div className="d-flex f-wrap">
+        <div className="d-flex f-wrap j-center">
             {getItemList &&
                 getItemList.map((item, index) =>
                     <ProductCard item={item} key={index} productId={deleteAuction} />

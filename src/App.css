@@ -69,7 +69,7 @@
 .auctionField {
     background-color: #d0ceee;
     height: 300px;
-    width: 600px;
+    width: 550px;
     margin: 20px;
 
 }
@@ -221,4 +221,8 @@
 .m-tl-30 {
      margin-top: 20px;
     margin-left: 100px;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
 }
