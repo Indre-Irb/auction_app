@@ -12,7 +12,7 @@ const AllAuctions = () => {
         http.get(`allauctions`).then(res => {
             console.log(res)
             if (res.success) {
-                setUser(res.user)
+                setUser(res.findUser)
                 setItemList(res.list)
             }
         })
